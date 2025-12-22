@@ -1,0 +1,3 @@
+12/19/25 v1 created the base code and tested with a simp Ping Pong response.
+12/20/25 v1.1 added trigger lists and responses to blank channel ideas -- Trigger groups Join/rules/crossplay/
+12/21/25 v1.2 add command to trigger list to apply of certain channels -
