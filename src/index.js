@@ -10,18 +10,20 @@ const client = new Client({
         IntentsBitField.Flags.MessageContent,
     ],
 });
-
 // Define the trigger phrases
 const triggerResponses = [
   {
     name: 'Joining the server',
     allowedChannels: [
-      '1217596119098593384',
-      '1450990654707470366',
-      '1403945676945096796'
+      //Mega's Nook Channel IDs
+      '1217596119098593384', 
+      '1403945676945096796',
+      '1259311635001249813',
+      //Mega-bot test server Channel IDs   
+      '1451773291151757385',
+      '1451773330221699276',
+      '1451773347141783682'      
     ],
-    // Replace with the actual channel IDs
-    //Group 1: Joing the server
     triggers: [
         'how do i join','how can i join','how to join','how do i join the server','how do i join this server','how can i join the server','how to join the server',
         'join server','joining','join this server','join the server','how join','how join server','how i join','how can i get in','how do i get in',
@@ -38,15 +40,11 @@ Also check out ⁠<#1336163521616019477> for the latest Palworld server updates`
   },
 {
     name: 'Rules',
-    // Replace with the actual channel IDs
-    //Group 2: Rules
-    triggers: [
-        'rules','server rules','what are the rules','what is the rules','what are server rules','what are the server rules','rules of the server',
+    triggers: 
+        ['rules','server rules','what are the rules','what is the rules','what are server rules','what are the server rules','rules of the server',
         'any rules','are there rules','got rules','where are the rules','where rules','show rules','can i see the rules','can you show the rules',
         'what rules do you have','do you have rules','do you have server rules','rules?','rule?','srv rules','server rule','ruls','ruels','rulez',
-        'serer rules','sever rules'
-    ],
-
+        'serer rules','sever rules' ],
     response: `
 **If you are looking for the rules of Mega's Nook:**
 Please Read <#1319802325677772900>
@@ -58,15 +56,18 @@ Please Read <#1450990654707470366>
 //Please Read ⁠<#1403945676945096796>`
   },
 {
-      name: 'Crossplay',
+    name: 'Crossplay',
     allowedChannels: [
-      '1217596119098593384',
-      '1450990654707470366',
-      '1403945676945096796'
+      //Mega's Nook Channel IDs
+      '1217596119098593384', 
+      '1403945676945096796',
+      '1259311635001249813',
+      //Mega-bot test server Channel IDs   
+      '1451773291151757385',
+      '1451773330221699276',
+      '1451773347141783682' 
     ],
-      // Replace with the actual channel IDs
-      //Group 3: Crossplay
-    triggers: [
+      triggers: [
         'join on ps5','ps5 join','join ps5','ps5 server','ps5 only','join on ps4','ps4 join','join ps4','playstation join','join on playstation',
         'join playstation','playstation4 join','playstation 4 join','playstation 5 join','crossplay','playstation crossplay','ps5 crossplay','ps4 crossplay',
         'crossplay ps5','crossplay ps4','crossplay pc','pc crossplay','gamepass crossplay','game pass crossplay','xbox gamepass crossplay','server pc only',
@@ -74,32 +75,35 @@ Please Read <#1450990654707470366>
         'game pass join','xbox gamepass join','can gamepass join','can ps5 join','can ps4 join','can playstation join','can console join','console crossplay',
         'does ps5 work','does playstation work','ps 5 join','ps-5 join','plaustation join','playstaion join','cross play','cross-play'
     ],
-
-    response: `We have enabled cross play on both Palworld servers so please play on your favorite device!`
+      response: `We have enabled cross play on both Palworld servers so please play on your favorite device!`
   },
-
   {
-        name: 'Pal Transfer',
-    allowedChannels: [
-      '1217596119098593384',
-      '1450990654707470366',
-      '1403945676945096796'
+      name: 'Pal Transfer',
+      allowedChannels: [
+      //Mega's Nook Channel IDs
+      '1217596119098593384', 
+      '1403945676945096796',
+      '1259311635001249813',
+      //Mega-bot test server Channel IDs   
+      '1451773291151757385',
+      '1451773330221699276',
+      '1451773347141783682' 
     ],
-        // Replace with the actual channel IDs
-        //Group 4: Global Pal Transfer
-    triggers: [
+      triggers: [
         'pal transfer?','pal transfer','global pal transfer','global pal transfer?','transfer pals','transfer pal','pal transfer rules',
         'pal transfer policy','pal transfer policy?','pal transfer rules?','transferring pals allowed','transferring pals allowed?','can i transfer my pal',
+        'can i transfer my pal?','can i transfer my pal to another server','can i transfer my pal to another server?','can i transfer my pal to another server',
+        'can i download pals','can i upload pals','can i download my pal','can i upload my pal','can i download my pal?','can i upload my pal?',
+        'can i download my pal from another server','can i upload my pal to another server','can i download my pal from another server?','can i upload my pal to another server?',
+        'can i download my pal from another server','can i upload my pal to another server?','can i download my pal from another server','can i upload my pal to another server',
     ],
     response: `
 For Palworld PVE servers it is allowed to download and upload pals as long as they able to be obtain through normal gameplay, 
 any illegal/genned pal will face disciplinary actions up to permanently being banned 
 
-For Palwrold PVP servers it is only allowed to upload pals as the server will reset between seasons. no downloading of pals is allowed.`
+For Palworld PVP servers it is only allowed to upload pals as the server will reset between seasons. no downloading of pals is allowed.`
   },
 ];
-// Please copy the correct channel IDs and update the server information as needed.
-// Please make sure you have developer mode enabled to get the correct channel IDs.
 // Add more trigger-response pairs as needed
 
 client.on('messageCreate', message => {
