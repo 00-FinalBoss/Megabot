@@ -7,7 +7,6 @@ module.exports = [
       "thanks bot",
       "good mega-bot",
       "thanks mega-bot",
-      "",
     ],
     responses: [
       "“😊 Thanks!”",
