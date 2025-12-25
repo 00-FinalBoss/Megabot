@@ -54,6 +54,6 @@ module.exports = [
       "can i have 3 bases on the server",
       "can i have 3 bases on the server?",
     ],
-    response: `We allow up to 2 bases per player/guild on the server. If you have more than 2 bases, you will need to deletethem to comply with the rules.`,
+    response: `We allow up to 2 bases per player/guild on the server. If you have more than 2 bases, you will need to delete them to comply with the rules.`,
   },
 ];
